@@ -34,12 +34,16 @@ public class AuthFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         ResponseEntity<String> httpResponse;
         String authHeader = httpRequest.getHeader("Authorization");
+        String endpoint = httpRequest.getRequestURI();
+        String method = httpRequest.getMethod();
+        if (endpoint.contains("/swagger-ui")|| endpoint.contains("/v3/api-docs")){
+            chain.doFilter(request, response);
+        }
         if (authHeader==null){
             ((HttpServletResponse) response).setStatus(HttpStatus.FORBIDDEN.value());
             return;
         }
-        String endpoint = httpRequest.getRequestURI();
-        String method = httpRequest.getMethod();
+       
         if (endpoint.equals("/login/")){
             try {
                 chain.doFilter(request, response);
