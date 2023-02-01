@@ -1,4 +1,4 @@
-package facturacion.bffweb.authz;
+package uic.bffweb.authz;
 
 import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;

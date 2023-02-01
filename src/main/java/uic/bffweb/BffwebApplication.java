@@ -1,4 +1,4 @@
-package facturacion.bffweb;
+package uic.bffweb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

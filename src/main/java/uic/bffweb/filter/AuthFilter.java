@@ -1,4 +1,4 @@
-package facturacion.bffweb.filter;
+package uic.bffweb.filter;
 
 import java.io.IOException;
 import jakarta.servlet.Filter;
@@ -14,7 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import facturacion.bffweb.authz.UserClient;
+import uic.bffweb.authz.UserClient;
 import feign.FeignException;
 
 import org.slf4j.Logger;
